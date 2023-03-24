@@ -41,6 +41,24 @@ for (int i = 1; i < addresses.Count; i++)
     Console.WriteLine("===============");
 }
 
+var outputFilePath = @$"{path}\data\listaindirizzi.txt";
+
+if (!File.Exists(outputFilePath))
+{
+    StreamWriter outputFile = File.CreateText(outputFilePath);
+    for (int i = 1; i < addresses.Count; i++)
+    {
+        outputFile.WriteLine(addresses[i].name);
+        outputFile.WriteLine(addresses[i].surname);
+        outputFile.WriteLine(addresses[i].street);
+        outputFile.WriteLine(addresses[i].city);
+        outputFile.WriteLine(addresses[i].province);
+        outputFile.WriteLine(addresses[i].zip);
+        outputFile.WriteLine("===============");
+    }
+    outputFile.Close();
+}
+
 string CheckString(string str)
 {
     if (str == "")
