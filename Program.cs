@@ -13,12 +13,12 @@ while (!file.EndOfStream)
 
     if (element.Length == 6)
     {
-        string? name = element[0];
-        string? surname = element[1];
-        string? street = element[2];
-        string? city = element[3];
-        string? province = element[4];
-        string? zip = element[5];
+        string name = element[0];
+        string surname = element[1];
+        string street = element[2];
+        string city = element[3];
+        string province = element[4];
+        string zip = element[5];
 
         var address = new Address(CheckString(name), CheckString(surname), CheckString(street), CheckString(city), CheckString(province), CheckString(zip));
         addresses.Add(address);
