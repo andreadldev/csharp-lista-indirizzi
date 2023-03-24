@@ -38,7 +38,7 @@ for (int i = 1; i < addresses.Count; i++)
     Console.WriteLine(addresses[i].city);
     Console.WriteLine(addresses[i].province);
     Console.WriteLine(addresses[i].zip);
-    Console.WriteLine("===============");
+    Console.WriteLine();
 }
 
 var outputFilePath = @$"{path}\data\listaindirizzi.txt";
@@ -54,7 +54,7 @@ if (!File.Exists(outputFilePath))
         outputFile.WriteLine(addresses[i].city);
         outputFile.WriteLine(addresses[i].province);
         outputFile.WriteLine(addresses[i].zip);
-        outputFile.WriteLine("===============");
+        outputFile.WriteLine();
     }
     outputFile.Close();
 }
